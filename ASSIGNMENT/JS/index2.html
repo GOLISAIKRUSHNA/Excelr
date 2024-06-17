@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array and String Methods in JavaScript</title>
+</head>
+<body>
+    <h2>Array and String Methods in JavaScript</h2>
+    <script>
+        // Array methods
+        var fruits = ["Apple", "Banana", "Cherry", "Date"];
+        
+        // 1. push(): Adds elements to the end of an array
+        fruits.push("Fig");
+        document.write("<h3>Array after push('Fig'):</h3>" + fruits);
+
+        // 2. pop(): Removes the last element from an array
+        var lastFruit = fruits.pop();
+        document.write("<h3>Array after pop():</h3>" + fruits);
+        document.write("<p>Last fruit removed: " + lastFruit + "</p>");
+
+        // 3. join(): Joins all elements of an array into a string
+        var fruitsStr = fruits.join(", ");
+        document.write("<h3>Array joined into a string:</h3>" + fruitsStr);
+
+        // String methods
+        var text = "Hello, world!";
+        
+        // 1. toUpperCase(): Converts a string to uppercase
+        var upperCaseText = text.toUpperCase();
+        document.write("<h3>Uppercase text:</h3>" + upperCaseText);
+
+        // 2. toLowerCase(): Converts a string to lowercase
+        var lowerCaseText = text.toLowerCase();
+        document.write("<h3>Lowercase text:</h3>" + lowerCaseText);
+
+        // 3. split(): Splits a string into an array of substrings
+        var words = text.split(" ");
+        document.write("<h3>Split text into words:</h3>" + words);
+    </script>
+</body>
+</html>

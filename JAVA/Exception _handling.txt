@@ -1,0 +1,317 @@
+Exception : 
+It is an unexpected event or problem which occurring during execution of a program (runtime)
+when an exception is occurred the program will stop abruptly ( suddenly or forcefully)
+
+Note : in java all the exceptions are class of throwable type (children to throwable class) 
+if any kind of exception is occurred means it is throwable type object will be created 
+
+
+Q) what happens when an exception is occurs?
+
+Note : The exception will occurs because of statements 
+The statements are responsible to generate an exception
+
+***** important exceptions 
+1) Arithmetic Exception : when we will divide any number by 0 . we will get arithmetic exception 
+	e.g., int a =10;
+		int b=0;
+		int res = a/b;
+		sopln(res);//arithmetic exception (number is /0)
+
+2) NullPointer Exception : When we try to perform some actions on null value we will get nullpointer exception
+	e.g., String s= null;
+		s.toUpperCase();//NullpointerException
+
+3) ArrayIndexOutofBoundsExcepton :
+	when we try to access the elements which is not in the given range the we will gets AIOBE
+	e.g., int arr[] = new int [5];
+		System.out.println(arr[5]);
+
+
+Types of Exception : 
+1) Checked Exception (aware)
+2) Unchecked Exception(can't aware)
+
+1) checked exception : 
+	Checked exception is compiler aware exceptions are checked exceptions. in this case our compiler already knows which particular statement is responsible to generate an exception. hence, the compiler will force the programmer to either handled the exception or the declared the exception. if not our compiler will never allowed us to proceed further. still if we try to proceed further we will get CTE saying unreportedException
+
+2) unchecked Exception : the compiler unaware excepitons are unchecked exceptions. in this case our compiler don't know which particular statement is responsible to generate an exception
+hence, our compiler will not force to the programmer to either handle or declare the exception
+therefore, we don't get anu compile time errors even if we neither handle nor declare the exception
+
+
+###] Throwable class 
+
+Throwable class is the parent class of exception hierarchy
+
+In throwable class and it sub classes the tostring() is overrident in such a way that it returns the fully qualified name of the exception along with reasons
+Note : 
+the Important methods for throwable class
+
+1) public String getMessage() -- any reason
+2) public void printStackTrace()--- which method which class and line all things
+
+
+############################################################################################################################################
+					
+							Exception  Handling
+
+############################################################################################################################################
+
+Exception handling is a mechanism which is used to continue the normal flow of execution of a program 
+
+we can handle any type of exception by using try-catch block.
+Syntax : 
+		try
+		{
+			//stmts;
+		}catch(declare a variable of throwable type)
+		{
+			//stmts;
+		}
+
+a) try block : 
+		The statements which are responsible to generate an exception should be written inside try block
+
+##] the execution of program will be paused
+##] a throwable type object will get created
+##} The refereces of throwable type object will be passed to the catch block
+
+
+b) Catch block : 
+
+1)The catch block is used to store the reference of throwable type object which is thrown by the try block
+2)When the catch block is capable to storing the reference of throwable type object, then we can say the exception is handled and that particular catch block will get executed 
+3) if the catch block doesn't store the reference an throwable type object , then we can say exception is not handled
+4)when the exception is handled normal flow will continue, in case if the exception is not handled then program will stop abruptly
+
+
+Q) when can we say the exception is handled ?
+--> the throwable type reference variable which is declared inside catch block and stores the reference of throwable type object then we can say the exception is handled.
+
+***] Try with multiple catch blocks 
+
+a single try block can be associated with multiple catch blocks
+
+Syntax : 
+	try
+	  {
+		//stmts;
+	  }
+	catch(....)
+	{
+		//stmts;
+	}
+	catch(....)
+	{
+		//stmts;
+	}
+Note : The throwable type object will be thrown top to bottom order 
+
+Note : if the catch block handles the exception then throwable type of object will not thrown to the return catch block
+
+****] Throw keyword 
+
+1)Throw is a keyword which is used to throw the exception manually
+2) using throw keyword we can throw checked exception, unchecked exception, customexception (user defined exception)
+
+
+Syntax : throw Exception;
+ex :	 throw customException("Message");
+
+
+
+****] custom exception
+The user defined exceptions are known as custom exception
+
+Steps to create an custom exception (own)
+Step1 : create a class and make the class as child to any of the exception class
+Step2 : in order to get the reason for exception override getMessage() method
+
+
+****]throws keyword
+Throws keyword is used to declare the exception back to the caller method
+only checked exceptions we can throws
+
+Note : throws keyword should always be used inside method declaration statement
+
+Syntax : [Access Modifier] [Modifier] RT Method-Name ([f.a]) throws Exception1, Exception2
+		{
+			//stmts
+		}
+
+***]Finally block
+finally block can be used along with try-catch block or only with try block also
+
+Syntax : 
+					try
+try					{
+{					  //stmts;
+//stmts;				}
+}					finally
+catch(..)				{
+{						//stmts;
+//stmts;				}
+}
+finally
+{
+ //stmts;
+}
+
+
+Note : finally block will get executed any of the scenario(situation) finally block will get executed whether the exception is occurred or not the exception is handled or not , finally block will always get executed
+
+whatever important instruction which has to be executed those instructions have to be written inside finally block
+
+*************************************************************************************************************************
+Final VS Finally Vs Finalize
+
+1) Final 
+	final is a keyword which can be prefixed with a class , variable, method
+	- final variable cannot be modified
+	- final method cannot be overridden
+	- final class cannot be inherited
+
+2) Finally
+	-finally is block which can be used along with try-catch and try block 
+	- finally block will get executed in all the cases, even the exception is not handled or occurred then also
+3) Finalize 
+	-finalize is the method which present inside object class
+	-finalize method is used to perform cleanup process for an object before garbage collector removes it.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+

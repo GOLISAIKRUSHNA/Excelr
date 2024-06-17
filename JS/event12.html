@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <select name="" id="car" onchange="bye()"  >
+        <option value="Mercedes">Mercedes</option>
+        <option value="Audi">Audi</option>
+        <option value="Scoda">Scoda</option>
+        <option value="BMW">BMW</option>
+    </select>
+    <p id="aja"></p>
+
+    <script>
+        function bye(){
+
+            let car=document.getElementById("car").value;
+            let cont=document.getElementById("aja");
+            cont.style.color="red"
+            cont.innerHTML="My dream car" +car;
+            cont.style.backgroundColor="yellow"
+            cont.style.fontSize="40px"
+        }
+    </script>
+
+</body>
+</html>

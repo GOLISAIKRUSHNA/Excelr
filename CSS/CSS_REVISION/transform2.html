@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 2px solid black;
+            display: flex;
+            height: 500px;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent{
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            border: 2px solid black;
+        }
+
+        #child{
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            background-image: url(/Images/git_profile.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            /* transform: scale(0.5); */
+            /* transform: scale(2); */
+            /* transform: scalex(2);    scale x axis means increases in width along left and right      */
+            /* transform: scaley(3); */
+            transform: scalez(505);
+
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        
+        <div id="child"></div>
+    </div>
+</body>
+</html>

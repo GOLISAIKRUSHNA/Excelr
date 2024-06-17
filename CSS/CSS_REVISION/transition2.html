@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            height: 100vh;
+            width: 100wh;
+            border: 2px solid black;
+            background-image: linear-gradient(red,green,blue);
+        }
+        .box{
+            margin-top: 40px;
+            margin-left: 20px;
+            height: 50px;
+            width: 200px;
+            border: 2px solid black;
+            text-align: center;
+            line-height: 50px;
+            font-weight: bolder;
+            transition-property: width;
+            transition-duration: 3s;
+            background-image: linear-gradient(limegreen,aqua,lightcoral,lightgreen);
+        }
+        #box1:hover{
+
+            width: 1200px;
+            transition-timing-function: linear;
+        }
+
+        #box2:hover{
+            width: 100%;
+            transition-timing-function: ease;
+        }
+
+        #box3:hover{
+            width: 100%;
+            transition-timing-function: ease-in;
+        }
+
+        #box4:hover{
+            width: 100%;
+            transition-timing-function: ease-out;
+        }
+
+        #box5:hover{
+            width: 100%;
+            transition-timing-function: ease-in-out;
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+        <div class="box" id="box1">linear</div>
+        <div class="box" id="box2">ease</div>
+        <div class="box" id="box3">ease-in</div>
+        <div class="box" id="box4">ease-out</div>
+        <div class="box" id="box5">ease-in-out</div>
+    </div>
+</body>
+</html>

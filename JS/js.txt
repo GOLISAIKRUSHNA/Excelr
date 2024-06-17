@@ -1,0 +1,26 @@
+
+
+
+Datatype:
+
+number-->int,float
+
+String-->'saikrushna',"saikrushna",'''saikrushna'''.
+
+Boolean-->True,False
+
+
+************************************************************
+
+String "",'',``
+
+1] literals  or values
+var name="goli"
+
+
+2]new
+var name=new String("goli")
+
+
+
+null,undefined

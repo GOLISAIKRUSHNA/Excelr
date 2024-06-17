@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .common{
+            height: 100px;
+            width: 100px;
+            border: 2px solid black;
+            margin-left: 100px;
+            display: inline-block;
+            background-color: dodgerblue;
+        }
+        #box2{
+            position: absolute;
+            height: 200px;
+            z-index: 1;   /*shift to left and mixed 3--> 2*/
+        }
+        #box3{
+            /* height: 200px; */
+            background-color: orange;
+        }
+
+        /* #box1{
+            position: absolute;
+            z-index: -1;
+        } */
+
+    </style>
+</head>
+        
+
+<body>
+    <div class="common" id="box1">box1</div>
+    <div class="common" id="box2">box2</div>
+    <div class="common" id="box3">box3</div>
+    <div class="common" id="box4">box4</div>
+
+    <!-- z-index have 3 value 0,1-1
+        0 by default(box number1)
+        1 means box number1
+        -1 means overlapped box -->
+</body>
+</html>

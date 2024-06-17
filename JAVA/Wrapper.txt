@@ -1,0 +1,87 @@
+Wrapper class : wrapper class provides mechanism to convert primitive data into non-primitive data 
+
+a) our java is not 100% object oriented ?
+--> because of primitive data 
+
+
+- to convert the primitive data to non-primitive data we can make use of wrapper class
+-for every primitive data there is a corresponding class which is declared in java.lang package is called as a wrapper class
+
+
+
+			Primitive data types				Wrapper class
+				
+				byte 		------------------->	   Byte
+				int		------------------->	   Integer
+				short		------------------->	   Short
+				long		------------------->	   Long
+				double		------------------->       Double
+				Boolean		------------------->	   Boolean
+				char		------------------->	   Character
+				float		-------------------> 	   Float
+
+
+
+A)valueOf() : it is static method convert the primitive data to the corresponding wrapper type object by using valueOf()
+
+****] value () : 
+This method is used to convert the wrapper class bject to the respective primitive data
+
+Declaration ] 
+
+a) public byte byteValue();
+b) public short shortValue();
+c) public int intValue();
+d) public long longValue();
+e) public double doubleValue();
+f) public float floatValue();
+
+Note : this 6 methods are present in all the subclasses of number class .
+Every class is present this all 6 methods. 
+
+similary inside character class we have charValue(). inside Boolean class we have booleanValue().
+
+e.g., non-primitive to primitive ---->it is nonstatic then used object 
+
+####] Parse () :
+this method is used to convert the sting to primitive datatype
+This method is present in all the wrapper classes except character class
+
+Declaration : 
+Integer - public static int ParseInt(String s);
+Byte - public static byte parseByte(s);
+Short - public static short parseShort(s);
+Float - public static float parseFloat(s);
+Double - public static double parseDouble(s);
+Long - public static long parseLong(s);
+Boolean - public static Boolean parseBoolean(s);
+
+autoboxing : the process of converting primitive data to the respective wrapper class object implicitely by the compiler is known as autoboxing
+autounboxing : the process of converting non-primitive data to primitive data is called as autounboxing
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+// let and const:
+
+let x = 10;
+x = 20; // Valid
+
+const y = 10;
+// y = 20; // Invalid, const variable cannot be reassigned
+// Arrow Functions:
+
+// Regular function
+function add(a, b) {
+    return a + b;
+}
+
+// Arrow function
+
+const add = (a, b) => a + b;
+
+// Arrow function with multiple statements
+
+const add = (a, b) => {
+    const sum = a + b;
+    return sum;
+};
+
+
+// Template Literals:
+
+const name = 'John';
+const age = 30;
+console.log(`My name is ${name} and I am ${age} years old.`);
+
+
+// Destruction Assignment
+
+const person = { name: 'John', age: 30 };
+const { name, age } = person;
+console.log(name, age);
+
+
+// Rest Parameter
+
+function sum(...numbers) {
+    return numbers.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(sum(1, 2, 3, 4)); // Output: 10
+
+
+// Spread Syntax
+
+const arr1 = [1, 2, 3];
+const arr2 = [4, 5, 6];
+const combined = [...arr1, ...arr2];
+console.log(combined); // Output: [1, 2, 3, 4, 5, 6]
+
+
+// Object Literal Enhancements:
+
+const name = 'John';
+const age = 30;
+
+const person = { name, age };
+console.log(person); // Output: { name: 'John', age: 30 }
+
+
+// Classes:
+
+class Person {
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    greet() {
+        console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+    }
+}
+
+const john = new Person('John', 30);
+john.greet(); // Output: Hello, my name is John and I am 30 years old.
+
+
+
+
+// Modules (export/import):
+
+// module.js
+export const add = (a, b) => a + b;
+
+// main.js
+import { add } from './module.js';
+console.log(add(2, 3)); // Output: 5
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body onload="" >
+    <div class="box">
+        <input type="text" id="search" value="ranchi" onchange="getdata()">
+
+        <div>
+            <h1 id="temp">20<sup>o</sup></h1>
+            <p style="font-size: 30px;text-align: center;color: white; font-weight: bolder;">Celcius</p>
+            <p class="data">Wind Speed :- <span id="ws">20</span></p>
+
+            <p class="data">Humidity :- <span id="hm">20</span></p>
+
+        </div>
+
+        <div style="display: flex; justify-content: center; align-items: center;" >
+            <img  width="300px" src="/weather.png" alt="">
+        </div>
+
+
+        <h5 style="text-align: right;color: white;padding: 10px;">Made by Saikrushna Project2</h5>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>

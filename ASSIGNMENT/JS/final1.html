@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+            font-family: cursive;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f1f1f1;
+        }
+
+        #timer {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        #session-length, #break-length {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+
+        button {
+            padding: 10px;
+            font-size: 16px;
+            width: 45%;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        #display {
+            font-size: 36px;
+            margin-bottom: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="timer">
+        <h2>Pomodoro Timer</h2>
+        <div id="session-length">
+            <button id="session-decrease">-</button>
+            <div>Session Length: <span id="session-value">25</span> minutes</div>
+            <button id="session-increase">+</button>
+        </div>
+        <div id="break-length">
+            <button id="break-decrease">-</button>
+            <div>Break Length: <span id="break-value">5</span> minutes</div>
+            <button id="break-increase">+</button>
+        </div>
+        <div id="display">25:00</div>
+        <button id="start">Start</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <script>
+        const sessionValue = document.getElementById('session-value');
+        const breakValue = document.getElementById('break-value');
+        const display = document.getElementById('display');
+        const startButton = document.getElementById('start');
+        const resetButton = document.getElementById('reset');
+
+        let sessionLength = 25; // in minutes
+        let breakLength = 5; // in minutes
+        let currentTime;
+        let isSession = true;
+        let timer;
+
+        function updateDisplay() {
+            let minutes = Math.floor(currentTime / 60);
+            let seconds = currentTime % 60;
+            display.textContent = `${minutes < 10 ? '0' : ''}${minutes}:${seconds < 10 ? '0' : ''}${seconds}`;
+        }
+
+        function startTimer() {
+            timer = setInterval(() => {
+                if (currentTime === 0) {
+                    if (isSession) {
+                        currentTime = breakLength * 60;
+                        isSession = false;
+                    } else {
+                        currentTime = sessionLength * 60;
+                        isSession = true;
+                    }
+                } else {
+                    currentTime--;
+                }
+                updateDisplay();
+            }, 1000);
+        }
+
+        function stopTimer() {
+            clearInterval(timer);
+        }
+
+        function resetTimer() {
+            stopTimer();
+            currentTime = sessionLength * 60;
+            updateDisplay();
+            isSession = true;
+            startButton.textContent = 'Start';
+        }
+
+        function increaseSession() {
+            if (sessionLength < 60) {
+                sessionLength++;
+                sessionValue.textContent = sessionLength;
+                if (isSession) {
+                    currentTime = sessionLength * 60;
+                    updateDisplay();
+                }
+            }
+        }
+
+        function decreaseSession() {
+            if (sessionLength > 1) {
+                sessionLength--;
+                sessionValue.textContent = sessionLength;
+                if (isSession) {
+                    currentTime = sessionLength * 60;
+                    updateDisplay();
+                }
+            }
+        }
+
+        function increaseBreak() {
+            if (breakLength < 60) {
+                breakLength++;
+                breakValue.textContent = breakLength;
+                if (!isSession) {
+                    currentTime = breakLength * 60;
+                    updateDisplay();
+                }
+            }
+        }
+
+        function decreaseBreak() {
+            if (breakLength > 1) {
+                breakLength--;
+                breakValue.textContent = breakLength;
+                if (!isSession) {
+                    currentTime = breakLength * 60;
+                    updateDisplay();
+                }
+            }
+        }
+
+        startButton.addEventListener('click', () => {
+            if (startButton.textContent === 'Start') {
+                startTimer();
+                startButton.textContent = 'Stop';
+            } else {
+                stopTimer();
+                startButton.textContent = 'Start';
+            }
+        });
+
+        resetButton.addEventListener('click', resetTimer);
+
+        document.getElementById('session-increase').addEventListener('click', increaseSession);
+        document.getElementById('session-decrease').addEventListener('click', decreaseSession);
+        document.getElementById('break-increase').addEventListener('click', increaseBreak);
+        document.getElementById('break-decrease').addEventListener('click', decreaseBreak);
+
+        resetTimer(); // initialize timer
+    </script>
+</body>
+</html>

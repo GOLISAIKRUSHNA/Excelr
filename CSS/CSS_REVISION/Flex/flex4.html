@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            height: 500px;
+            width: 500px;
+            background: black;
+            border: 2px solid red;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 0 auto;
+
+        }
+        .box{
+            height: 50px;
+            width: 50px;
+            border: 2px solid blueviolet;
+            color: white;
+            text-align: center;
+
+        }
+        #second{
+            flex-basis: 100px;
+            flex-shrink: 2;
+        }
+        #first{
+            flex-grow: 2;
+            /* flex-shrink: 2; */
+        }
+        #four{
+            flex-grow: 6;
+        }
+        #fifth{
+            flex-grow: 4;
+        }
+        #six{
+            flex-grow: 6;
+            flex-shrink: 2;
+        }
+      
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div id="first" class="box">box1</div>
+        <div id="second" class="box">box2</div>
+        <div id="third" class="box">box3</div>
+        <div id="four" class="box">box4</div>
+        <div id="fifth" class="box">box5</div>
+        <div id="six" class="box">box6</div>
+    </div>
+</body>
+</html>

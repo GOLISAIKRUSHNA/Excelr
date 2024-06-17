@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="btn" >heading 2</h2>
+    <script>
+
+        document.querySelector("#btn").addEventListener("click",demo)
+        document.querySelector("#btn").addEventListener("click",demo2)
+
+        // document.querySelector("#btn").onclick=demo;//eventhandling on 1 time
+        // document.querySelector("#btn").onclick=demo2;//eventhandling on 1 time
+
+        function demo(){
+            console.log("demo");
+        }
+        function demo2(){
+            console.log("demo2");
+        }
+    </script>
+</body>
+</html>

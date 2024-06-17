@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: cursive;
+}
+
+body{
+background-color: wheat;
+height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+box-sizing: border-box;
+flex-direction: column;
+
+
+}
+.frame{
+    height: 510px;
+    width: 400px;
+    background-color: white;
+    box-shadow: 2px 2px 15px aqua,-5px -5px 10px yellow;
+
+}
+
+.para{
+    text-align: center;
+    padding: 10px;
+    font-size: 18px;
+
+   
+}
+
+#display{
+    height: 60px;
+    width: 95%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    box-shadow: inset 1px 5px 10px lightblue,inset -1px -5px 10px lightblue;
+    background: transparent;
+    padding:  10px;
+    margin: 0px 10px;
+    box-sizing: border-box;
+    text-align: right;
+    border-radius: 5px;
+
+}
+
+
+.outer{
+    display: flex;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+.button{
+    height:70px;
+    width: 70px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    border-radius: 5px;
+  
+}
+
+.button:hover{
+    background: red;
+    color: white;
+}
+
+.button:active{
+    box-shadow: 2px 5px 10px rgb(32, 31, 31);
+}
+
+.last{
+    text-align: right;
+    padding: 0px 30px;
+    /* background-color: black; */
+    color: blueviolet;
+}
+
+.heading{
+    background:#eee;
+    color: darkorchid;
+    padding: 0px 10px;
+    margin-bottom: 20px;
+}
+
+/* .outerhead{
+    margin-top: 0px;
+    padding: 0px;
+    border: 0px ;
+} */

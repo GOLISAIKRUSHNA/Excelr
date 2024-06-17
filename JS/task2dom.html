@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: black;
+            
+        }
+        #circle{
+            height: 300px;
+            width: 300px;
+            border: 1px solid blueviolet;
+            border-radius: 50%;
+            margin-top: 40px;
+
+            line-height: 300px;
+            text-align: center;
+
+        }
+
+        .on{
+            height: 200px;
+            width: 50px;
+            border: 1px solid black;
+            margin: 20px;
+            background-color:lightcoral;
+
+        }
+        .off{
+            height: 200px;
+            width: 50px;
+            border: 1px solid black;
+            margin: 20px;
+            background-color:lightcoral;
+
+
+
+        }
+        .com{
+            display:flex;
+            flex-direction: row;
+            line-height: 200px;
+            text-align: center;
+            
+        }
+    </style>
+</head>
+<body>
+    <h2>&#128161; 	&#128161;Bulb Task	&#128161; 	&#128161; </h2>  
+    <div id="circle">Bulb </div>
+    <div class="com">
+    <div class="on " onclick="on()">On</div>
+
+    <div class="off" onclick="off()">Off</div>
+</div>
+    <script>
+        function on(){
+
+        
+        let bulb=document.getElementById("circle");
+        // let co=prompt("Enter your favourite color: ")
+            bulb.style.backgroundColor=prompt("give")
+            alert("bhai tune kardiya")
+        }
+
+
+        function off(){
+
+        
+    let bulb=document.getElementById("circle")
+    // let co=prompt("Enter your favourite color: ")
+    bulb.style.backgroundColor="white"
+}
+    </script>
+
+</body>
+</html>

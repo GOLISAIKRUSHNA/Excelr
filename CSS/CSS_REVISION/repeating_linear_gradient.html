@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .common{
+            height: 300px;
+            width: 300px;
+            border: 2px solid black;
+        }
+        #grad1{
+            background-image: repeating-linear-gradient(to bottom,aqua,orange,lightblue);
+        }
+        #grad2{
+            background-image: repeating-linear-gradient(to bottom,aqua 10%,orange 15%,lightblue 25%);
+        }
+        #grad3{
+            background-image: repeating-linear-gradient(45deg,aqua 5%,orange 10%,red 15%);
+        }
+        #grad4{
+            background-image: repeating-linear-gradient(to bottom,aqua,orange,lightblue);
+        }
+        #grad5{
+            background-image: repeating-linear-gradient(to bottom,aqua,orange);
+        }
+        #grad6{
+            background-image: repeating-linear-gradient(to right,black,white);
+        }
+    </style>
+</head>
+<body>
+    <div class="common" id="grad1"></div>
+    <div class="common" id="grad2"></div>
+    <div class="common" id="grad3"></div>
+    <div class="common" id="grad4"></div>
+    <div class="common" id="grad5"></div>
+    <div class="common" id="grad6"></div>
+</body>
+</html>

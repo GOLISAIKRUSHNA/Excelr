@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Loops, Operators, and Conditions</title>
+</head>
+<body>
+    <h2>JavaScript Loops, Operators, and Conditions</h2>
+    <script>
+        // Loop example: Printing numbers from 1 to 10 using a for loop
+        document.write("<h3>Printing numbers from 1 to 10 using a for loop:</h3>");
+        for (var i = 1; i <= 10; i++) {
+            document.write(i + " ");
+        }
+
+        // Conditional statement example: Checking if a number is even or odd
+        var number = 7;
+        document.write("<h3>Checking if a number is even or odd:</h3>");
+        if (number % 2 === 0) {
+            document.write(number + " is even.");
+        } else {
+            document.write(number + " is odd.");
+        }
+
+        // Loop and condition example: Printing even numbers between 1 and 20
+        document.write("<h3>Printing even numbers between 1 and 20:</h3>");
+        for (var j = 1; j <= 20; j++) {
+            if (j % 2 === 0) {
+                document.write(j + " ");
+            }
+        }
+
+        // Loop and condition example: Printing multiplication table of 5
+        document.write("<h3>Multiplication table of 5:</h3>");
+        var multiplier = 5;
+        for (var k = 1; k <= 10; k++) {
+            document.write(multiplier + " x " + k + " = " + (multiplier * k) + "<br>");
+        }
+    </script>
+</body>
+</html>

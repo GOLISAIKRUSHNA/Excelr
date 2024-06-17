@@ -1,0 +1,286 @@
+Multithreading : 
+	To understanding the concept of multithreading we first need to understand the concepts of multi-tasking and multi-processing
+
+
+##] Multi-tasking :
+performing or executing more than one task at the same time is known as multitasking
+
+Task : 
+
+a) task is the end goal that has tobe achieve
+b) the steps involved in completing are known as process 
+c) hence, task can be said to be combination of several processes.
+
+
+##] Multi-processing
+	performing or executing more than one process at the same time is known as multi-processing
+
+A process is the combination of several threads.
+
+##] Thread 
+1) Thread is the smallest unit of process
+2) threds is also known as light weight process
+
+##] Multi-threading
+ performing or executing more than one thread at the same time is known as multi-threading
+
+
+##] thread in java
+
+1) In java, the thread is considered as a special class.
+2) There is specific ways to create a thread as well as execute the thread
+	2.1] 1st way : by extending thread class
+	2.2] 2nd way : by implementing runnable interface 
+
+####] life cycle of thread 
+
+1) start to running -  When thread is initialized or started and the resources required for its execution are allocated to it. Then the thread moves from the start state to running state
+
+
+2) start to waiting - When thread is initialized or started and the resources required for execution are not allocated to it then the thread moves from the start state to waiting state 
+
+
+3) running to stop - When the thread is in the running state and the complete its execution then the thread moves from running state to stop state
+
+4) waiting to stop - When the thread is waiting for the resources to be allocated but when the resources are not allocated to the thread for a long time then the thread moves from waiting state to stop state
+
+5) running to waiting - When the thread is executing and the resources allocated to it are taken away then , the thread moves from the running state to the waiting state
+
+6) waiting to running - When the thread is  waiting for the resources and the resources are allocated to it then thread moves from waiting state to running state
+
+
+About states : 
+
+1) the start state indicates that the thread is ready for execution
+
+2) the running state indicates that the thread is currently executing
+
+3) the waiting state indicates that the thread is waiting for resource is required for its execution
+
+4) the stop state indicates that the thread has been terminated or ended.
+
+5) one life cycle of thread is determine through its transition from start state to till the stop state 
+
+##] Methods in Thread
+
+1) start() : - 
+	it is non-static method in thread class
+	it is used to initialize the object of a class as a thread
+	the start() internally calls run method from the target object 
+
+2) Run() - 
+	it is non-static method present in thread class
+	this method is used to declare the behaviour or execution logic of the thread
+
+3) currentThread() - 
+	this method is static method in thread class.
+	this method is point towards the object of currently executing thread
+	it can also be said that this method creates indirect relationship between user created thread and thread class
+
+
+4) stop() -
+	it is a non-static method in thread class
+	it is used to forced the thread to stop its execution and move to stop state
+	once the thread is in stop state it cannot resume its execution hence it has to be started again 
+
+
+5) wait () 
+	it is a non-static method present in Thread class
+	it is used to put a thread from the running stating to the wait state forcefully
+	with the help of wait() we can paused its execution and call it for execution later, whenever required
+
+6) notify()
+	this is non-static method present in thread class
+	it is used to call the thread from waiting state to running state and resume its execution
+	the thread will not resume its execution automatically. if its forcefully paused by the wait() method 
+	then the thread will resume only when it receive a notify call
+	The notify() method its responsible to resume the execution of only one thread
+
+7) notifyAll()
+	this is non-static method in thread class
+	it is used to call the thread from the waiting state to running state
+	it is similar to the notify method but it is responsible to call all the waiting threads to resume their execution
+
+
+
+##] Thread schedular 
+
+1) thread schedular is a component in jvm which is responsible to manage the execution of all the threads
+
+2) it takes care of managing the life cycle of thread
+
+3) the thread schedular assigns a dedicated stack for each thread and transfers the control between them based on thread properties 
+
+Note : we cannot control the order of execution of the threads because we can't tell for sure which thread will be called for execution by the thread schedular.
+
+
+###] Thread properties 
+Each thread that is created has some properties 
+
+1) name
+2) priority
+
+Properties can be accessed and modified by using respective helper method
+
+1) name -----getName() - for accessing purpose
+	----setName(String name) -- for modifying purpose
+2) priority ----getPriority()
+	    ----setPriority() 
+
+Note : all the helpers method for thread properties are non-static method from thread class
+
+priority : 
+default priority of all thread is "5"
+Max priority is 10
+Min priority is 1
+
+
+*********************************************************************************************
+
+Resource for threads 
+
+1) The resource for a thread can be the memory, a variable, or a method, an object or an entire class
+2) resource which is being used by more than one (multiple) threads is called as a shared resource
+
+**********************************************************************************************8***
+
+Note : Multithreading leads to data inconsistency when multiple threads operate on a shared resource
+
+- data inconsistency in multithreading : 
+
+1) in multithreading if the threads are working on the same resource , then they are unaware of each others operations on that resource
+
+2) Each thread independently operates on the shared resource, generating on independent and inconsistent output
+
+3) to overcome this data inconsistency we need to make use of synchronization
+
+
+
+######################################################################################
+Synchronization : 
+
+1) synchronization is used to avoid the inconsistency caused due to multithreading
+2) it is done with the help of "synchronized" keyword
+3) in synchronization we need to apply the keyword to the shared resource
+4) if the shared resource is synchronize then its accessible by only one thread at a time
+5) this happens because whenever shared resource is synchronized and access byu a thread then the thread applies a lock on the resource
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

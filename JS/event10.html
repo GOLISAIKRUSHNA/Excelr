@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text"value="your text is pasted" onpaste="getpaste()" >
+    <p id="hi"></p>
+    <script>
+        function getpaste(){
+            let pri=document.getElementById("hi")
+            pri.innerHTML=("chalo pasted the content")
+            pri.style.color="red"
+            pri.style.fontSize="20px"
+        }
+    </script>
+</body>
+</html>

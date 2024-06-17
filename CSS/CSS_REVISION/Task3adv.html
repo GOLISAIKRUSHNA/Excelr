@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        *{
+            font-family: cursive;
+        }
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: lightcyan;
+            margin-top:1%;
+        }
+        .face{
+            height: 500px;
+            width: 500px;
+            background-color: yellow;
+            border-radius: 50%;
+            /* position: relative; */
+        }
+        .eye1{
+            height: 100px;
+            width: 100px;
+            background: whitesmoke;
+            position: relative;
+            top: 100px;
+            left: 100px;
+            border-radius: 50%;
+
+        }
+        .eye2{
+            height: 100px;
+            width: 100px;
+            background: whitesmoke;
+            position: relative;
+            top: 0px;
+            left: 300px;
+            border-radius: 50%;
+        }
+        .mouth{
+            height: 100px;
+            width: 200px;
+            background: whitesmoke;
+            position: relative;
+            top: 125px;
+            left: 150px;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+            line-height: 100px;
+            text-align: center;
+            font-family: cursive;
+            /* font-weight: bolder;
+            font-size: 16px; */
+            background-color: black;
+        }
+        .e1{
+            height: 50px;
+            width: 50px;
+            background: black;
+            color: white;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            top: 25%;
+            left: 25%;
+            border-radius: 50%;
+            animation: eye 1s linear  infinite ;
+
+        }
+
+        @keyframes eye {
+            0%{
+                transform: rotate(0deg)translate(50%) ;
+            }
+            100%{
+                transform: rotate(360deg)  translate(50%) ;
+            }
+        }
+
+        .e2{
+            height: 50px;
+            width: 50px;
+            background: black;
+            color: white;
+            display: flex;
+            position: relative;
+            justify-content: center;
+            align-items: center;
+            top: 25%;
+            left: 25%;
+            border-radius: 50%;
+            animation: eye 1s linear  infinite ;
+
+        }
+
+        h2{
+            color: red;
+            
+            
+        }
+
+        
+    </style>
+  </head>
+
+  <body>
+    <div class="outer">
+      <div class="inner">
+        <center><h1>Tried&#128512;&#128540;</h1></center>
+        <div class="face">
+          <div class="eye1"> <div class="e1">One</div></div>
+          <div class="eye2"> <div class="e2">two</div></div>
+          <div class="mouth">
+            <h2>Smile</h2>
+          </div>
+        </div>
+    <center><h1>Duration: 1hr:20 Min &#x23F2;  &#x23f0;</h1></center>
+
+      </div>
+    </div>
+
+  </body>
+</html>

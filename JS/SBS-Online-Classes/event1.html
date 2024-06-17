@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #hi{
+            color: lightcoral;
+        }
+    </style>
+</head>
+<body>
+    <h2 id="hi" onclick="see()">heading 2</h2>
+    <p id="hi">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempore, modi!</p>
+    <button onclick="see()">hii bro</button>
+    <script>
+        // function see(){
+        //     let x=document.querySelectorAll("#hi")
+        //     x[0].style.color="red";
+        //     x[0].style.backgroundColor="orange";
+
+        // }
+
+
+        function see(){
+            let x=document.querySelector("#hi")
+            x.style.color="blue";
+            x.style.backgroundColor="orange";
+            x.innerHTML="By saikrushna";
+
+        }
+    </script>
+</body>
+</html>

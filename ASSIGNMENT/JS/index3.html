@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Function Declaration:
+
+
+function greet() {
+    console.log("Hello!");
+}
+greet();
+// Function Expression:
+
+
+var greet = function() {
+    console.log("Hello!");
+};
+greet();
+// Arrow Function Expression:
+
+
+var greet = () => {
+    console.log("Hello!");
+};
+greet();
+// Function Constructor:
+
+
+var greet = new Function('console.log("Hello!")');
+greet();
+// Named Function Expression:
+
+
+var greet = function sayHello() {
+    console.log("Hello!");
+};
+greet();
+// Immediately Invoked Function Expression (IIFE):
+
+(function() {
+    console.log("Hello!");
+})();
+// Returning a Function from Another Function:
+
+
+function greetGenerator() {
+    return function() {
+        console.log("Hello!");
+    };
+}
+var greet = greetGenerator();
+greet();
+// ES6 Arrow Function with Implicit Return:
+
+
+var greet = () => console.log("Hello!");
+greet();
+    </script>
+</body>
+</html>

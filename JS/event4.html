@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onmouseover="mouseover()" onmouseout="mouseout()"></div>
+
+    <script>
+        function mouseover(){
+            let ele =document.getElementById("box");
+            ele.style.color="red";
+            ele.style.height="300px";
+            ele.style.width="300px";
+            ele.style.backgroundColor="lightseawood";
+            ele.style.borderRadius="50%"
+
+        }
+
+        function mouseout(){
+            let ele =document.getElementById("box");
+            ele.style.color="red";
+            ele.style.height="300px";
+            ele.style.width="300px";
+            ele.style.backgroundColor="blue";
+            ele.style.borderRadius="20px"
+
+        }
+    </script>
+</body>
+</html>

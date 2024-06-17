@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .main{
+            background-image: linear-gradient( 135deg, #F0FF00 10%, #58CFFB 100%);
+            height: 1000px;
+            width: 1500px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap:wrap ;
+
+            /* align-content: ; */
+        }
+        .parent{
+            background-image: linear-gradient( 135deg, #65FDF0 10%, #1D6FA3 100%);
+            height: 200px;
+            width: 200px;
+            border: 2px solid black;
+        }
+        .box{
+            background-image: linear-gradient( 135deg, #FFF886 10%, #F072B6 100%);
+            height: 50px;
+            width: 50px;
+            border: 2px solid black;
+        }
+        #first{
+            display: flex;
+
+            justify-content: flex-start;
+        }
+        #second{
+            display: flex;
+            justify-content: center;
+        }
+        #third{
+            display: flex;
+            justify-content: flex-end;
+        }
+       
+        #four{
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #fifth{
+            display: flex;
+            justify-content: space-around;
+        }
+        #six{
+            display: flex;
+            justify-content: space-evenly;
+        }
+       
+        #seven{
+            display: flex;
+            align-items: flex-start;
+        }
+        #eight{
+            display: flex;
+            align-items: center;
+
+        }
+        #nine{
+            display: flex;
+            align-items: flex-end;
+
+        }
+       
+        #ten{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        #eleven{
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+        }
+
+
+        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div id="first" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="second"  class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="third" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="four" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="fifth" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="six" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="seven" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="eight" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="nine" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="ten" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        <div id="eleven" class="parent">
+            <div class="box">box1</div>
+            <div class="box">box2</div>
+            <div class="box">box3</div>
+        </div>
+        
+    </div>
+</body>
+</html>

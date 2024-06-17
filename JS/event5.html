@@ -1,0 +1,51 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            height: 100px;
+            width: 100px;
+            border: 1px solid;
+        }
+    </style>
+</head>
+<body>
+    <div id="box" onmousedown="mousedown()" onmouseup="mouseup()"></div>
+
+    <script>
+        function mousedown(){ //down means released
+            let ele =document.getElementById("box");
+            ele.style.color="red";
+            ele.style.height="300px";
+            ele.style.width="300px";
+            ele.style.backgroundColor="lightseawood";
+            ele.style.backgroundImage="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0uZg-iPmyxVPpNQ3_Y5cMqM2v3tCgYo5O9w&usqp=CAU)";
+            ele.style.backgroundPosition="center";
+            ele.style.backgroundRepeat="norepeat";
+            ele.style.backgroundSize="cover";
+
+
+
+
+        }
+
+        function mouseup(){// up means pressed
+            let ele =document.getElementById("box");
+            ele.style.color="red";
+            ele.style.height="500px";
+            ele.style.width="500px";
+            ele.style.backgroundColor="blue";
+            ele.style.backgroundImage="url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR0uZg-iPmyxVPpNQ3_Y5cMqM2v3tCgYo5O9w&usqp=CAU)";
+            ele.style.backgroundPosition="center";
+            ele.style.backgroundRepeat="norepeat";
+            ele.style.backgroundSize="cover";
+
+        }
+    </script>
+</body>
+</html>

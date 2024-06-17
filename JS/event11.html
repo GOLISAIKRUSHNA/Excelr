@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" value="cut the code" oncut="cut()">
+    <div id="cut"></div>
+    <script>
+        function cut(){
+        let circle=document.getElementById("cut")
+        circle.style.color="red";
+        circle.style.height="300px";
+        circle.style.width="300px";
+        circle.style.backgroundColor="aqua";
+        circle.style.borderRadius="50%";
+        circle.innerHTML="cut hogaya paste karo";
+        circle.style.margin="50px 0px"
+
+
+        }
+    </script>
+</body>
+</html>

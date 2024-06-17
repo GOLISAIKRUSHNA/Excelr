@@ -1,0 +1,181 @@
+String class 
+	non-primitive data 
+
+a) String is a literal or data 
+b) it is a group of the characters which are enclosed within " " (double quotes)
+c) it is non-primitive data [multi-valued data]
+d) we can store the string literal by creating object for the following classes
+
+string classes present inside "java.lang" package
+	a.1).java.lang.String;
+	a.2).java.lang.Stringbuffer;
+	a.3) .java.lang.StringBuilder;
+e) whenever we create a string,implicitly our compiler will create one object for java.lang.String class inside string constant pool.
+
+
+String literal 
+
+1) anything which enclosed within "" is known as string literal
+e.g., "hello"
+
+Characteristics of StringLiteral
+
+a) whenever we used stringliteral in our java program an object is created implicitly by our compiler for java.lang.string class inside string constant pool
+b) in case, if the object is already present with same data then instead of creating new object the existing object reference is given
+
+
+************************************************************************************************************************
+###] java.lang.String
+
+1) java.lang.String is predefined class 
+2) it is a final class in java (hence we cannot inherit string class)
+3) string class inherits object class
+4) inside string class, tostring(), hashcode(),equals() method of object class is overridden
+5)String class implements interfaces like comparable, serializable, charsequence
+
+
+*] constructor in string class
+
+
+		Constructor							Description
+
+	1) String()							create an empty string object
+	2) String(string literal)					creates string object by initialize with string 									literal
+	3) String(Char []ch)						creates string by converting character array into 									string
+	4) String(byte [] b)						creates string by converting byte array into string
+	5) String(stringBuffer sb)					creates string by converting stringbuffer into string
+	6)string(StringBuilder sb)					creates string by converting stringbuilder into 										string
+
+##] important methods (non-static methods)
+
+Characteristics of string : 
+1) string class objects are immutable in nature (once the string object is created it cannot be modified)
+2) if we try to modify string class object then with modified data a new object will get created and returns the address
+
+Note : String class objects are immutable in nature because of string constant pool 
+
+
+
+
+Disadvantage : 
+1) string class is immutable in nature the biggest disadvantage of string
+2) to overcome this advantage of string we can use stringbuilder and stringbuffer classes
+
+
+##} stringBuffer class
+1) string buffer class is a predefined class which is present in java.lang package
+2) it is the final class in java means we cannot override
+3) string buffer class inherits object class
+4) string buffer class can doesn't contain any string constant pool
+5) tostring() equals() hashcode() of object class is overridden inside stringbuffer class
+6)stringbuffer class implements serializable and charsequence interface
+
+##] StringBuffer constructor
+
+1) stringBuffer() : creates an empty stringBuffer object
+2) stringBuffer(String s) : create a stringbuffer object by initializing the given string
+Note : this constructor is used to convert string class object to string buffer object
+
+Characteristics : 
+1) string buffer object is mutable in nature
+(for every modification new object wont get created)
+2) because string constant pool is not applicable for stringbuffer objects
+
+disadvantage : 
+stringbuffer objects are thread safe. hence multiple threads cannot access stringbuffer object at the same time . they execution time will be more. hence, to overcome this disadvantage we can use stringbuilder class
+
+
+
+
+***********************************************************************************************
+Final keyword : 
+final it is a keyword and it is a access modifier
+we can prefix with final keyword for class, variable , method
+
+- final variable 
+if a prefix variable has final then it cannot be modified
+
+-final method
+if we prefix method has final then it cannot be overridden
+
+-final class
+if we prefix class has final it cannot be inherited
+
+
+***************************************************************************************************************
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

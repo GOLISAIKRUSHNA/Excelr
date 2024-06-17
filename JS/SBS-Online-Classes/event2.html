@@ -1,0 +1,27 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body onload="load()">
+    <h2>heading 2</h2>
+    <input type="text" onchange="change()" id="change">
+    <script>
+
+        function change(){
+            console.log("change");
+            let x=document.querySelector("#change")
+            console.log(x.value);
+            console.log(x.value.toUpperCase());
+
+        }
+        function load(){
+            console.log("On load is calling");
+        }
+    </script>
+</body>
+</html>

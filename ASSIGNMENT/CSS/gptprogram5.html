@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Responsive Menu</title>
+<!-- <link rel="stylesheet" href="styles.css"> -->
+<style>
+    .menu {
+  background-color: #333;
+  padding: 10px;
+}
+
+.menu ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-align: center;
+}
+
+.menu ul li {
+  display: inline-block;
+}
+
+.menu ul li a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .menu ul li {
+    display: block;
+  }
+
+  .menu ul li a {
+    padding: 10px;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+<nav class="menu">
+  <ul>
+    <li><a href="#">Home</a></li>
+    <li><a href="#">About</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+</nav>
+
+</body>
+</html>

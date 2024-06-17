@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .box{
+        height: 100px;
+        width: 100px;
+        /* border: 2px solid black; */
+        display: inline-block;
+    }
+    #box1{
+        border-radius: 50%;
+        background: aqua;
+        border-style: double;
+        border-color: red;
+    }
+    #box2{
+        border-radius: 30%;
+        background: yellow;
+        border-style: dashed;
+        
+    }
+    #box3{
+        border-radius: 70%;
+        background: blue;
+        border-style: dotted;
+    }
+    #box4{
+        border-radius: 100%;
+        background: green;
+        border-style: groove;
+        border-color: yellow;
+    }
+    #box5{
+        border-radius: 50%;
+        background: violet;
+        border-color: yellow;
+        border-style:outset;
+    }
+    #box6{
+        background-image: url(/Images/background.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius:20px;
+        /* background: orange; */
+        border-style: double;
+    }
+    #box7{
+        border-top: 20px red;
+        border-left: 20px blue;
+        border-right: 20px green;
+        border-bottom: 20px violet;
+        border-style:dashed;
+        /* border-radius: 20%; */
+    }
+    #box8{
+        border-style: solid;
+        border-top-left-radius: 50%;
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+
+
+    }
+
+    #box9{
+        height: 200px;
+        width: 200px;
+        border: solid black 5px;
+        background-color: blue;
+        box-shadow: 20px 20px 8px 4px rgb(61, 198, 243) ;
+        opacity: 1;
+
+    }
+</style>
+<body>
+    <div class="box" id="box1"></div>
+    <div class="box" id="box2"></div>
+    <div class="box" id="box3"></div>
+    <div class="box" id="box4"></div>
+    <div class="box" id="box5"></div>
+    <div class="box" id="box6"></div>
+    <div class="box" id="box7"></div>
+    <div class="box" id="box8"></div>
+    <div class="box" id="box9"></div>
+
+</body>
+</html>

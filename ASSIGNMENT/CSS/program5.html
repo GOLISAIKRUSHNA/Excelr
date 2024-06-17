@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .parent{
+            display: flex;
+            flex-direction:column ;
+            justify-content: center;
+            align-items: center;
+            background: #eee;
+            height: 800px;
+            width: 800px;
+            margin: auto;
+
+        }
+        .common{
+            height: 200px;
+            width: 200px;
+            border: 1px solid;
+            color: white;
+            background-color: aqua;
+            line-height: 200px;
+            text-align: center;
+
+
+        }
+
+        @media (min-width:500px) {
+            
+            .parent{
+                flex-direction: row;
+                justify-content: center;
+            align-items: center;
+            }
+        }
+
+        @media (min-width:500px)  and (max-width:800px){
+            .parent{
+                flex-direction: row;
+                justify-content: center;
+            align-items: center;
+            }
+        }
+
+
+
+        @media (min-width:1400px)  {
+            .parent{
+                flex-direction: row;
+                justify-content: center;
+            align-items: center;
+            width: 1400px;
+            }
+        }
+       
+    </style>
+</head>
+<body>
+   <center> <h1>Responsive</h1></center>
+   <div class="parent">
+   <div class="common">Menu1</div>
+   <div class="common">Menu2</div>
+   <div class="common">Menu3</div>
+   <div class="common">Menu4</div>
+    </div>
+
+
+
+</body>
+</html>

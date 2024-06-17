@@ -1,0 +1,52 @@
+    <!-- display the smooth transition between two more specified color -->
+
+    
+    <!-- linear (down ,up,left,right,diagonal)two or more color
+    radial (center)
+    conic (rotated around center point) -->
+
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            .common{
+                height: 200px;
+                width: 200px;
+                border: 2px solid black;
+            }
+            
+           
+             #img1{
+                background-image: linear-gradient(30deg,red,green,blue);
+            }
+            #img2{
+                background-image: linear-gradient(to top right,red,green,blue);
+            }
+            #img3{
+                background-image: linear-gradient(90deg,red,green,blue);
+            }
+            #img4{
+                background-image: linear-gradient(violet,indigo,blue,green,yellow,orange,red);
+            }
+            #img5{
+                background-image: linear-gradient(to bottom right,red,green,blue);
+            }
+            #img6{
+                background-image: linear-gradient(to bottom,red,green,blue);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="common" id="img1"></div>
+        <div class="common" id="img2"></div>
+        <div class="common" id="img3"></div>
+        <div class="common" id="img4"></div>
+        <div class="common" id="img5"></div>
+        <div class="common" id="img6"></div>
+        
+    </body>
+    </html>

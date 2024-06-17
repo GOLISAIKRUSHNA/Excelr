@@ -1,0 +1,48 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    height: 80vh;
+    background-image: linear-gradient(to right,aqua,rgb(0, 255, 128));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box{
+    width: fit-content;
+    background:#eee;
+    padding: 50px;
+    border-radius: 5px ;
+    box-shadow: 5px 5px 10px black;
+}
+
+h1{
+    color: hotpink;
+}
+
+
+input{
+    padding: 10px;
+    border-radius: 5px;
+}
+
+input[type="button"]{
+    background: hotpink;
+    background: aqua;
+}
+
+
+label{
+    color: blue;
+}
+
+.hi{
+    text-align: right;
+    color: hotpink;
+    
+}

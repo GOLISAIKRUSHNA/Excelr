@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" value="Nacho" oncopy="copy()" id="hi">
+    <script>
+        function copy(){
+            // alert("text is copied");
+
+            let hi=document.getElementById("hi");
+            hi.innerHTML="chal hogaya";
+            hi.style.color="red";
+        }
+    </script>
+   
+</body>
+</html>

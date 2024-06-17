@@ -1,0 +1,592 @@
+OOPS CONCEPT : 
+Object oriented programming 
+There are Four basic pillars : 
+	1)Encapsulation
+	2)Inheritance
+	3)polymorphism
+	4)Abstraction
+
+
+1) Encapsulation 
+	The process of binding or wrapping the states and behaviour of an object is known as encapsulation
+		states : non-static variables
+		behaviours : non-static methods
+	we can achieve encapsulation with the help of class
+	
+Advantage of encapsulation is Data hiding.
+
+a) data hiding :
+	data hiding is the process of restricting direct access to the data members by providing indirect secure access via methods.
+Note : with the help of data hiding we can provide security for our data members.
+	The advantage of data hiding is verification and validation
+
+Steps to achieve data hiding :
+
+1) prefixed the data members with private keyword
+2) used the getter and setter method to access the data members of another class
+
+Note : 
+a) Getter () method is used to get() the data or fetch the data . The return type of getter () should be same as  data types of our member 
+	in getter () method return type is important
+
+b) setter() method is used to set the data or modify the data. (formal argument is important)
+
+Private : 
+
+1) in java we can achieve data hiding by using private keyword
+2) private is a keyword and it is access modifier
+3) if we prefixed data members as private then within the same class we can access private data members directly. but outside of class if we want to access private data members then direct access is restricted
+4) if we want to access private data members of another class then create getter() and setter() method
+
+
+
+2) Inheritance : 
+	a) inheritance comes under is-a relationship
+	b) the relationship which is similar to parent-child is known as is-a relationship
+	c) in is-a relationship all the properties of parent class will get inherited to child class
+	d) inheritances is the process of acquiring properties form of parent class to child class
+	e) in java, we can achieve inheritance with the help of "Extends" keyword "implements" keyword
+	f) using inheritance we can achieve generalization and specialization
+	g) parent class is known as generalized class and
+	h) child class is known as specialized class
+
+Note : using parent class reference variable we can access only parent class members but not child class members
+using child class reference variable we can access both parent as well as child class members
+
+Terminologies : 
+parent class : superclass, base class 
+child class : subclass, derived class
+
+Types of inheritance :
+1) single level inheritance : 
+	if the inheritance is for only one level then such kind of inheritance is known as single level inheritance
+
+2) multi-level inheritance : 
+	if the inheritance is of more than one level such king of inheritance is known as multilevel inheritance
+
+3) hierarchical inheritance : 
+	if a parent class have more than one child at the same level such type of inheritance is known as hierarchical inheritance
+
+4) multiple inheritance : 
+if a child class have more than one parent at the same level then such kind of inheritance is known as multiple inheritance
+	
+Note : 
+	1) in java multiple inheritance cannot be achieved with the help of classes
+	2) Assume, their is class A and Class B bothe the classes have same method with same signature
+	3) now, class c extends both class A, B if we create object for class c, our compiler will add default no argument constructor inside that very first statement is super call statement
+	4) the job of super call statement is to call the constuctour of parent class. here we have two parents A and b 
+		so, which class constructor has to be called ? 
+			in this case our compiker will get confused to call which parent class constructor. hence, this leads to ambiguity problem ( diamond problem) 
+
+5) Hybrid inheritance :
+hybrid inheitance is combination of hierarchical and multiple inheirance
+
+note : hybrid inheritance is also not supported by java for classes . because of diamond problem in multiple inheritance.
+
+
+
+****************************************************************************************
+super () call statement : 
+
+1) super() is keyword which is used to access the member of parent class
+2) super () call statement is used to call the constructor of parent class from child class
+
+purpose of super() call statement ? 
+1) to load all the non-static members of a parent class into the object created 
+2) with the help of super () call statement we can pass data to the non-static members of parent class by the child class
+3) super call() statement is always executed first
+
+**********************************************************************************************************
+******] non-primitive typecasting 
+The process of converting one type of object reference to another type of object regerence is known as non-primitive type casting
+non-primitive type casting is also known as derived type casting
+
+Rules to achieve non-primitive type casting 
+1) if we want to convert one type of object reference to another type of object reference their must exist Is-A relationship
+2) or their must exist a common child 
+
+Types of non-primitive typecasting
+1) upcasting
+2) downcasting
+
+1) Upcasting
+
+	The process of converting child type reference variable to parent type reference variable is known as upcasting
+							
+							OR
+	The process of creating an object for child and storing it in parent type reference variable is known as upcasting
+Note : 
+	once the reference variable got upcasted, using upcasted reference variable we can access only parent class members but not child class members
+	if we try to access child class members using parent type reference variable the e get CTE 
+	upcasting can be peformed implicitly by our compiler
+	we can perfoem upcasting using typecast operator
+		e.g ., Parent1 p1 = (Parent1)ch1;//explicitly 
+
+Disadvantage of upcasting : 
+	1) once the reference variable got upcasted, using upcasted reference variable we can access only parent class members but not child class members
+
+
+Why do we need to upcast?
+1) using upcasting we can achieve generalization (common - parent is common)
+2) when we create generalized container , we can store any type of child class object reference into it
+3) Parent class is always considered as generalized class
+4) parent type reference variable is used to crate a generalized container
+	e.g ola o;
+		o =new Auto();
+
+
+****] Downcasting 
+	
+	The process of converting parent type reference variable to child type reference variable is known as downcasting
+				
+	downcasting cannot be done implicitly by the compiler. we need to perform downcasting explictly by using type cast operator
+
+Advantage :
+	using downcasting we can access child class members 
+
+Child ch2 = (child) p1;
+
+
+
+*************************************************************************************************************************
+Class cast exception 
+
+it is runtime exception
+during downcasting we get "class cast exception" which leads to stop the program abnormally.
+
+When do we get class cast exception?
+when we try to convert reference variable to specific type (class) if the object doesn't contain instance of that particular type then we get class cast exception
+
+Note :
+we can verify whether the object contains instanceOf that particular type of not by using instance 
+
+
+instanceOf keyword 
+
+1) instanceof it is a keyword. it is binary operator
+
+Syntax : reference_variable instanceOf classtype ;
+	p1 instanceOf child;
+
+Note : the return type of instanceof operator is Boolean
+if the object contains instance of that particular type then instanceof operator will return true (true means downcasting possible) if not present it will return false (false means downcasting not possible) u will get class cast exception
+
+
+***************************************************************************************************************
+Polymorphism 
+
+polymorphism is divided into two terms 
+poly means many/various/numerous
+morphism means forms/ behaviour
+
+polymorphism means it is by ability of an object which undergoes many behaviours is known as polymorphism
+
+
+e.g., one name -------> many forms\
+	one variable ------> different values
+	one method --------> different behaviour
+
+
+Types of polymorphism : 
+1) Compile time polymorphism
+2) Runtime polymorphism
+
+
+
+1) compile time polymorphism
+	If the association between method call statement and the method declaration statement is achieved during compile time and same behaviour is executed is known as compile time polymorphism.
+
+it is also known as static polymorphism
+we can achieve compile time polymorphism by the following ways :
+1) method overloading
+2) constructor overloading
+3) method shadowing
+4) variable shadowing
+5) operator overloading ( it is not supported in java) 
+
+
+1) Method Overloading 
+	if a class have more than one method with same name but different formal arguments is known as method overloading
+	method overloading can be achieve by using static and non static methods
+
+We can achieve method overloading by using 2 ways 
+1) by changing the number of arguments
+2) by changing the type of arguments
+
+
+**] can we overload main method ? 
+yes we can overload the main method but our jre will call the main method which accepts string [] args
+
+
+
+2) Runtime polymorphism 
+	if the association between method call statement and method declaration statement which happens during runtime (execution of a program) is known as runtime polymorphism
+
+it is also known as dynamic polymorphism
+we can achieve runtime polymorphism with the help of method overriding
+
+2.1) method overriding : 
+	changing the implementation of parent class method inside child class is known as method overriding
+					
+						or
+	
+	if the parent class and child class contains same non-static method with same declaration is known as method overriding
+
+###] Rules for achieving method overriding
+
+1) Their should exist Is-a relationship (parent and child)
+2) The method which we are overriding should be non-static
+3) The method declaration should be same in both parent class and child class
+4) access modifier should be same or it should higher accessibility (default, public is higher)
+	
+
+###] Method shadowing : 
+	if a parent class and child class have the same static method with same declaration is known as method shadowing
+	method shadowing is an example of compile-time polymorphism'
+
+	it is a static binding
+	it is based on reference variable type is executed.
+	in method shadowing all the method should be static only 
+
+###] variable shadowing : 
+	if a parent class and child class have same variable with same name then it is called as a variable shadowing
+	
+	variable shadowing can be achieved sing both static variable as well as non-static variables
+	variable shadowing is an e.g., of compile time polymorphism
+	variable shadowing means same variable name but different values also.
+	variable shadowing is executed depends on reference variable type
+
+*****************************************************************************************************************
+ABSTRACTION
+
+******************************************************************************************************************
+Abstraction is the process of hiding the background details by providing only the essential features 
+					OR
+it is the process of hiding method implementation by showing only the functionality (method declaration) to the user is known as abstraction
+
+##] How to achieve abstraction in java ? 
+by using abstract class and interfaces we can achieve abstraction 
+
+we can achieve abstraction by using abstract keyword.
+
+##] Abstract keyword 
+	abstract is a keyword and it is a modifier
+	we can prefix abstract keyword for method and classes
+
+##] abstract method 
+
+any method which is prefixed with abstract modifier is known as abstract method
+abstract methods are incomplete methods.
+because abstract method doesn't contain any implementation
+abstract method contains only declaration 
+abstract method contains only non-static method
+
+Syntax : 
+	Abstract [access modifier] [modifier] RT method name ([f.a])
+
+##] Abstract class 
+
+	any class is prefixed with abstract keyword is known as abstract class
+	if a class contains atleast one abstract method or more than one abstract method in this case we must and should make the class as abstract.
+if a class doesn't contain any of the abstract methods then making the class as a abstract is optional.
+
+Note : abstract class can contain both concrete method  as well as abstract method hence the main method is concrete method which can be declared inside abstract class 
+
+if any class contains main method then it is eligible for execution therefore we can execute abstract class as well.
+
+we cannot create object for abstract class
+if a class contains atleast one abstract method either declared or inherited then we must and should make the class as abstract
+
+Note : 
+	1) static method cannot be make abstract
+	2) static method cannot be override
+***********************************************************************************************************************
+
+Concrete class : 
+	---- The class which is not prefixed with abstract keyword is known as concrete class
+	---- concrete class doesn't contain any abstract methods
+	---- we can create object for concrete class
+
+Concrete method : 
+	---- the method which is not prefixed with abstract keyword is known as concrete method
+	---- inside in that we can give implementation
+
+**********************************************************************************************
+
+implementation of abstract method : 
+
+
+	if a class is inheriting an abstract class then the child should provide implementation for all the abstract methods of parent class 
+
+	incase , if the child class doesn't want to provide implementation for abstract method of parent class then it is mandatory to make the child class as abstract
+
+***********************************************************************************************************************************
+
+steps to provide implementation for abstract method:
+
+Step1 : create a class by using inheritance make the class as child to abstract class
+Step2 : using method overriding provide implementation for all the abstract method of parent class
+
+
+Note : 
+	in case if the child doesn't want to provide implementation for the abstract method of parent class, then make the class as abstract the next upcoming child will have the responsibility to provide implementation for all the abstract methods.
+
+********************************************************************************************************************************
+INTERFACE 
+*******************************************************************************************************************************
+
+Interface is a component of Java which is used to achieve 100% of abstraction
+
+Syntax : 
+	[access modifier] interface Interface_name
+
+in class access modifier is default in interface by default access modifier is public
+
+
+e.g., interface demo 
+	{
+		//stmts
+	}
+
+Note : 
+when we compile an interface dot(.)class file will get generated that time compiler implicitly add the abstract keyword for class 
+
+Q ] what are all the members that can be declared inside an interface ? 
+
+___________________________________________________________________________________________________________________________
+		Members				class 				interface
+__________________________________________________________________________________________________________________________
+	
+1) static variable 				yes				yes, only final static variable is allowed
+
+2) non-static variable				yes 				No
+
+3) static method				yes				yes
+
+4) non-static method				yes				yes, only abstract method is allowed not concrete
+
+5) constructor					yes				no
+
+6) initializers					yes				no
+
+_______________________________________________________________________________________________________________________________-
+
+
+Note : in interface by default access modifier is public
+
+Note : any variable declared in interface then compiler will add implicitly final static (or else you also declared explicitly)
+
+
+Example 1 : 
+
+interface demo
+{
+	int a =10;
+	psvm(String[]args)
+	{
+		sopln(a);//10
+		a=20;//CTE (becoz final variable cannot be modified)
+	}
+}
+
+Note : inside interface static methods are allowed hence, we can create main method an interface therefore we can execute interface as well 
+
+
+**************************************************************************************
+Q ] why do we need interface ? 
+---> by using interface we can achieve 100% abstraction
+     using interface we can provide solution for diamond problem. therefore we can achieve multiple inheritance with the help of interface
+
+Q2 ] What are all the members which will not get inherited from interface?
+----> from an interface static methods will never get inherited to the class or interface 
+
+
+Q.3] inheritance with respect to interface
+-----> an interface can inherit any number of interfaces at the same time with the help of "extends " keyword
+
+
+e.g) 
+interface I1
+{
+abstract public void m1();
+}
+Interface I2 extends I1
+{
+}
+
+Note : when , an interface is inheriting another interface in this case the child interface need not to provide implementation for parent interface. 
+
+
+Note : using interface we dont get any diamond problem. hence, we can achieve multiple inheritance using interface
+
+
+Reason : - solution for diamond problem
+
+a) interface doesn't contain any constructor 
+b) non-static concrete methods are not allowed in an interface. therefor, non static methods are abstract
+c) static concrete method will never get inherited in an interface 
+
+****] inheritance of an interface by the class
+a) a class can inherit an interface with the help of implements keyword
+b) a class can inherit multiple interface as well . a class also at the same time 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

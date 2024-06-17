@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            border: 2px solid black;
+            display: flex;
+            height: 500px;
+            width: 100vw;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            padding: 0;
+        }
+
+        #parent{
+            height: 300px;
+            width: 300px;
+            background-color: gray;
+            border: 2px solid black;
+        }
+
+        #child{
+            height: 300px;
+            width: 300px;
+            border: 2px solid;
+            background-image: url(/Images/git_profile.jpeg);
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+
+            /* transform: scale(0.5); */
+            transform: scalex(2);
+            /* transform: scaley(3); */
+            /* transform: skew(45deg); */
+            /* transform: skewX(45deg); */
+            /* transform: skewy(40deg); */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+        
+        <div id="child"></div>
+    </div>
+</body>
+</html>
